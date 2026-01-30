@@ -1,43 +1,43 @@
 const { test, expect } = require('@playwright/test');
 
 const TEST_CASES = [
-  { id: 'Pos_Fun_0001', input: 'eppothum naangal gavanamaaga iruppathu avasiyam', expected: 'எப்போதும் நாங்கள் கவனமாக இருப்பது அவசியம்' },
+  { id: 'Pos_Fun_0001', input: 'naan veedu selkeren', expected: 'நான் வீடு செல்கிறேன் ' },
 
   { id: 'Pos_Fun_0002', input: 'nee naalakku kandi poviya?', expected: 'நீ நாளைக்கு கண்டி போவியா?' },
 
-  { id: 'Pos_Fun_0003', input: 'indaiku naan office mudinju sapida poram ', expected: 'இண்டைக்கு நான் ஆபீஸ் முடிஞ்சு சாப்பிட போறம் ' },
+  { id: 'Pos_Fun_0003', input: 'Mazhai  peithathaal  naan  veettil  irundhen  ', expected: 'மழை  பெய்ததால்  நான்  வீட்டில்  இருந்தேன்  ' },
 
   { id: 'Pos_Fun_0004', input: 'naan padippen appuram vela seiven', expected: 'நான்  படிப்பேன்  அப்புறம்  வேல  செய்வேன் ' },
 
-  { id: 'Pos_Fun_0005', input: 'indaiku weather nallaa irukku adhaan naan veliya ponen', expected: 'இண்டைக்கு  வெஅத்தேர்  நல்லா  இருக்கு  அதான்  நான்  வெளிய  போனேன் ' },
+  { id: 'Pos_Fun_0005', input: 'Kathavai  moodu .', expected: 'கதவை  மூடு . ' },
 
-  { id: 'Pos_Fun_0006', input: 'Diltan arumai uncle ien makan', expected: 'தில்தான்  அருமை  அங்கிள்  இன்  மகன்  ' },
+  { id: 'Pos_Fun_0006', input: 'Avar  udhavi  seyyavillai .', expected: 'அவர்  உதவி  செய்யவில்லை .  ' },
 
-  { id: 'Pos_Fun_0007', input: 'Shiromy romba azhaga irukkaa', expected: 'ஷிரோமி ரொம்ப அழகா இருக்கா' },
+  { id: 'Pos_Fun_0007', input: 'Shiromy  mekavum   azhagana pen ', expected: 'ஷிரோமி  மிகவும்   அழகான பெண் ' },
 
-  { id: 'Pos_Fun_0008', input: 'Nee eppo assignment submit seiyappogirai?', expected: 'நீ எப்போ அச்சிஞ்மேங்ட் சப்மிட் செய்யப்போகிறாய்?' },
+  { id: 'Pos_Fun_0008', input: 'Anbudan Vanakkam !', expected: 'அன்புடன்  வணக்கம் !  ' },
 
-  { id: 'Pos_Fun_0009', input: 'naan maama voda kadalukku poren', expected: 'நான்  மாமா  வோட  கடலுக்கு  போறேன்  ' },
+  { id: 'Pos_Fun_0009', input: 'Thayavu  seythu  ithai  urudhipaduthavum   ', expected: 'தயவு  செய்து  இதை  உறுதிப்படுத்தவும்  ' },
 
-  { id: 'Pos_Fun_0010', input: 'Athithya enai nesikum oru anpu sakothari', expected: 'ஆதித்ய  என்னை  நேசிக்கும்  ஒரு  அன்பு  சகோதரி ' },
+  { id: 'Pos_Fun_0010', input: 'Aam ,  enakku  purindhathu . ', expected: 'ஆம் ,  எனக்கு  புரிந்தது .  ' },
 
-  { id: 'Pos_Fun_0011', input: 'naan indaiku oru kadaila saapiden', expected: 'நான்  இண்டைக்கு  ஒரு  கடைல  சாப்பிட்டேன்  ' },
+  { id: 'Pos_Fun_0011', input: 'Mannikkavum , naan  thaamadhamaaga  vanthuveden ', expected: 'மன்னிக்கவும் , நான்  தாமதமாக  வந்துவிட்டேன்   ' },
 
-  { id: 'Pos_Fun_0012', input: 'Neengal kaalaiyil Eththanai manikku elumbugireergal?', expected: 'நீங்கள் காலையில் எத்தனை மணிக்கு எழும்புகிறீர்கள்?' },
+  { id: 'Pos_Fun_0012', input: 'konjam help panraiya?', expected: 'கொஞ்சம்  ஹெல்ப்  பண்றியா?' },
 
-  { id: 'Pos_Fun_0013', input: 'konjam help panraiya?', expected: 'கொஞ்சம்  ஹெல்ப்  பண்றியா?' },
+  { id: 'Pos_Fun_0013', input: 'Naan dhinamum thanneer  kudikkiren ', expected: 'நான் தினமும் தண்ணீர்  குடிக்கிறேன் ' },
 
-  { id: 'Pos_Fun_0014', input: 'Avan naalai payanam pogiraan', expected: 'அவன்  நாளை  பயணம்  போகிறான் ' },
+  { id: 'Pos_Fun_0014', input: 'saran nanraka aadukeeran  .', expected: 'சரண் நன்றாக ஆடுகிறான்  . ' },
 
-  { id: 'Pos_Fun_0015', input: 'Nee enka pora', expected: 'நீ என்க போற' },
+  { id: 'Pos_Fun_0015', input: 'kamal   orupattupadeenan ', expected: 'கமல்   ஒருபாட்டுபாடினான் ' },
 
-  { id: 'Pos_Fun_0016', input: 'enaku athu vendam', expected: 'எனக்கு  அது  வேண்டாம்   ' },
+  { id: 'Pos_Fun_0016', input: 'Avargal  naalai  varamaattaargal ', expected: 'அவர்கள்  நாளை  வரமாட்டார்கள்   ' },
 
-  { id: 'Pos_Fun_0017', input: 'indaiku  kapal varukenrathu', expected: 'இண்டைக்கு  கப்பல் வருகின்றது    ' },
+  { id: 'Pos_Fun_0017', input: 'Naangal  paadam  padikkirOm ', expected: 'நாங்கள்  பாடம்  படிக்கிறோம்     ' },
 
-  { id: 'Pos_Fun_0018', input: 'epdi iruka?', expected: 'எப்படி  இருக்க     ' },
+  { id: 'Pos_Fun_0018', input: 'Avar  veettil  irukkiraar ', expected: 'அவர்  வீட்டில்  இருக்கிறார்      ' },
 
-  { id: 'Pos_Fun_0019', input: 'nalaku class Eththanai maniku ', expected: 'நாளைக்கு கிளாஸ் எத்தனை மணிக்கு' },
+  { id: 'Pos_Fun_0019', input: 'Thayavu  seythu  enakku  pathil  sollungal  ', expected: 'தயவு  செய்து  எனக்கு  பதில்  சொல்லுங்கள் ' },
 
   { id: 'Pos_Fun_0020', input: 'naan oru manavan ', expected: 'நான் ஒரு மாணவன்  ' },
 
@@ -51,13 +51,13 @@ const TEST_CASES = [
 
   { id: 'Neg_Fun_0025', input: 'indaiku kapal varukenrathu', expected: 'இண்டைக்கு கப்பல் வருகிறது ' },
 
-  { id: 'Neg_Fun_0026', input: 'enna seyyanum', expected: 'என்ன செய்யவேண்டும் ' },
+  { id: 'Neg_Fun_0026', input: 'Naan  Email anuppinen', expected: 'நான்  Email அனுப்பினேன்  ' },
 
-  { id: 'Neg_Fun_0027', input: 'avanga office poganum', expected: 'அவர்கள் ஆபீசுக்கு போகனும்  ' },
+  { id: 'Neg_Fun_0027', input: 'avanga office poganum', expected: 'அவர்கள் office போகனும்  ' },
 
-  { id: 'Neg_Fun_0028', input: 'avan pazhaya car vaangiRaan ', expected: 'அவன் பழைய கார்வாங்கிறான்  ' },
+  { id: 'Neg_Fun_0028', input: 'Teams meeting link WhatsApp moolam anuppappattadhu. ', expected: 'Teams meeting link WhatsApp மூலம் அனுப்பப்பட்டது  ' },
 
-  { id: 'Neg_Fun_0029', input: 'enna samayal seivathu', expected: 'என்ன சமையல் செய்ய்வது' },
+  { id: 'Neg_Fun_0029', input: 'NIC Ennai padhivu  seyya vendum ', expected: 'NIC எண்ணை பதிவு செய்தேன்' },
 
   { id: 'Neg_Fun_0030', input: 'neenga ready ah irukkeenga', expected: 'நீங்கள் ரெடி ஆ இருக்கீங்கா' },
 
