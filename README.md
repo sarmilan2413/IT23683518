@@ -30,7 +30,39 @@ This suite is suitable for QA assignments, academic projects, and real-world aut
 
 ---
 
-
-
 ## Project Structure
 
+│
+├─ tests/ # Playwright test scripts
+│ ├─ positive-tests.spec.ts
+│ └─ negative-tests.spec.ts
+│
+├─ data/ # Input and expected output files
+│ ├─ positive-cases.json
+│ └─ negative-cases.json
+│
+├─ reports/ # Test reports
+│ ├─ html-report/
+│ └─ markdown-report.md
+│
+├─ utils/ # Helper functions
+│
+├─ playwright.config.ts # Playwright configuration
+│
+└─ README.md # Project documentation
+
+
+
+## Playwright Test Project
+
+### Requirements
+- Node.js installed
+
+### Install
+npm install
+
+### Run Tests
+npx playwright test
+
+### Website Tested
+https://tamil.changathi.com/
