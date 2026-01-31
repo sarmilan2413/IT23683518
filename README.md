@@ -53,3 +53,6 @@ https://tamil.changathi.com
 ### Installation
 ```bash
 npm install
+
+### GitHub Repository
+[Click here to view the project on GitHub](https://github.com/sarmilan2413/IT23683518.git)
